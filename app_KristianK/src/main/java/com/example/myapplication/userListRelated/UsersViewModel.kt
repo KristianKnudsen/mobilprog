@@ -29,7 +29,7 @@ class UsersViewModel(private val repository: UserRepo): ViewModel() {
 
     private fun getAllUsers(){
         viewModelScope.launch {
-            _users.value = repository.getAllUsers.value
+            _users.value = JsonApi.retrofitService.getUsers()
             _usersLoaded.value = true
         }
     }
