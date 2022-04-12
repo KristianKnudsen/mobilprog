@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foto_nav"
+    app:startDestination="@id/users1Fragment">
+
+    <fragment
+        android:id="@+id/users1Fragment"
+        android:name="com.example.myapplication.userListRelated.Users1Fragment"
+        android:label="fragment_users1"
+        tools:layout="@layout/fragment_users1" >
+        <action
+            android:id="@+id/action_users1Fragment_to_albums2Fragment"
+            app:destination="@id/albums2Fragment" />
+        <action
+            android:id="@+id/action_users1Fragment_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/albums2Fragment"
+        android:name="com.example.myapplication.albumsRelated.Albums2Fragment"
+        android:label="fragment_albums2"
+        tools:layout="@layout/fragment_albums2" >
+        <argument
+            android:name="SelectedUser"
+            app:argType="com.example.myapplication.user.User" />
+        <action
+            android:id="@+id/action_albums2Fragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.example.myapplication.photosListRelated.PhotosFragment"
+        android:label="PhotosFragment" >
+        <argument
+            android:name="selectedAlbum"
+            app:argType="com.example.myapplication.albumsRelated.Album" />
+        <action
+            android:id="@+id/action_photosFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.myapplication.PhotoFragment"
+        android:label="photo_fragment"
+        tools:layout="@layout/photo_fragment" >
+        <argument
+            android:name="selectedPhoto"
+            app:argType="com.example.myapplication.photosListRelated.Photo" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.myapplication.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

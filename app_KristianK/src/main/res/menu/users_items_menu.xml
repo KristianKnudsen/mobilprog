@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Innstillinger"
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        app:showAsAction="always" />
+
+    <item android:title="Avslutt"
+        android:id="@+id/quit"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_logout_24"/>
+
+    <item android:title="Om appen"
+        android:id="@+id/about"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_info_24"/>
+</menu>

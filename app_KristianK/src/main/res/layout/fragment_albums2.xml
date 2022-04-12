@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".albumsRelated.Albums2Fragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.myapplication.albumsRelated.AlbumsViewModel" />
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/users_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        tools:itemCount="11"
+        tools:listitem="@layout/user_item"/>
+
+</layout>

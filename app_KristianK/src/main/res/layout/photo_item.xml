@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="photo"
+            type="com.example.myapplication.photosListRelated.Photo" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:clickable="true"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                tools:text = "title"
+                android:textSize="24sp"
+                android:id="@+id/cardTitle"/>
+
+            <ImageView
+                android:id="@+id/cardImg"
+                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="TODO"
+                tools:src="@tools:sample/backgrounds/scenic" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView >
+</layout>
